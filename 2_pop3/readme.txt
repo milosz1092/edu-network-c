@@ -1,0 +1,3 @@
+- Compile with gcc on Linux.
+- No arguments.
+- Press CTRL-C - ends program with summary.

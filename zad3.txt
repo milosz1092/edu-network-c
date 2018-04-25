@@ -1,0 +1,8 @@
+Napisaæ (w dowolnym jêzyku) program, który wyœle wiadomoœæ email poprzez SMTP.
+
+Program powinien:
+- pobraæ od u¿ytkownika wszystkie odpowiednie parametry (w dowolny sposób: argumenty aplikacji konsolowej, plik konfiguracyjny, wejœcie "z klawiatury")
+- wys³aæ wiadomoœæ email o tytule "PS LAB (nr grupy laboratoryjnej)"
+- w treœci wiadomoœci powinno znaleŸæ siê imiê i nazwisko osoby oddaj¹cej program
+- adres wysy³ki wiadomoœci powinien byæ zawarty w parametrach podanych na wstêpie.
+U¿ycie wysokopoziomowych bibliotek do wysy³ki poprzez SMTP bêdzie skutkowa³o mocnym obni¿eniem oceny za program (MAKSYMALNIE ocena DST). Podczas oddawania programu nast¹pi pisemne sprawdzenie informacji teoretycznych dotycz¹cych SMTP.

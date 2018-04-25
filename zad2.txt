@@ -1,0 +1,22 @@
+
+Zadanie nr 2:
+Zaimplementowaæ prostego klienta POP3 w jednym z wybranych jêzyków: C / C++ / C# / Java. W przypadku chêci u¿ycia innego jêzyka programowania, nale¿y wczeœniej skonsultowaæ siê mailowo z prowadz¹cym zajêcia.
+Dopuszczalne jest jedynie wykorzystanie podstawowych klas i metod do obs³ugi gniazd, nie wolno korzystaæ z klas "opakowuj¹cych", wyspecjalizowanych do obs³ugi POP3.
+Do programu powinien byæ do³¹czony plik App.config. Z tego pliku program bêdzie pobiera³ dane wymagane do dzia³ania, czyli:
+- adres serwera
+- nazwê u¿ytkownika
+- has³o
+- port (domyœlna wartoœæ dla POP3: port 110)
+- czas [s] co ile sprawdzana ma byæ poczta
+UWAGA, dygresja - proszê o zachowanie ostro¿noœci i nie wpisywanie do pliku hase³ do "wra¿liwych" maili (prywatnych lub uczelnianego). Warto na potrzeby tego i kolejnego zadania utworzyæ specjalnego maila, którego potencjalna strata nie bêdzie bolesna. Odradzam konto na gmail (bywa k³opotliwe podczas niskopoziomowych operacji SMTP/POP3), zamiast tego lepiej utworzyæ konto na lokalnych portalach: poczta.onet.pl, poczta.wp.pl, poczta.o2.pl.
+Sposób przechowywania danych w pliku konfiguracyjnym jest dowolny (XML/plaintext/jakikolwiek inny), ale powinien on pozwalaæ na ³atw¹ modyfikacjê danych.
+Po uruchomieniu, program powinien:
+* pobraæ dane z pliku konfiguracyjnego
+* nawi¹zaæ po³¹czenie z serwerem poprzez gniazdo i siê uwierzytelniæ
+* co X czasu (wartoœæ okreœlona w pliku .config) program poiwnien ³¹czyæ siê z serwerem i sprawdzaæ, czy pojawi³a siê nowa wiadomoœæ
+* w przypadku pojawienia siê nowej wiadomoœci (od czasu ostatniego sprawdzenia), program powinien to zasygnalizowaæ - pokazaæ jej tytu³, albo przynajmniej poinformowaæ o nowej wiadomoœci
+* program powinien pozwoliæ na zakoñczenie po³¹czenia (np. poprzez wpisanie znaku 'q'). Program powinien wówczas zamkn¹æ gniazda i poinformowaæ, ile maili ³¹cznie zosta³o odebranych od czasu uruchomienia.
+* program powinien mieæ zaimplementowany mechanizm UIDL (Unique Id Listing) w celu unikniêcia fa³szywego wykrywania ka¿dorazowo tych samych wiadomoœci.
+Szczegó³owy RFC dla POP3: https://www.ietf.org/rfc/rfc1939.txt?number=1939
+Wymagane bêd¹ g³ównie polecenia USER, PASS, UIDL, QUIT
+Proszê o ostro¿noœæ w kwestii hase³ oraz o pilnowanie, aby przesadnie nie "spamowaæ" serwera pocztowego (wysy³anie polecenia LIST co 2 milisekundy mo¿e zostaæ przez serwer odebrane jako atak). Rozs¹dne jest odpytywanie serwera co 5-10 sekund.

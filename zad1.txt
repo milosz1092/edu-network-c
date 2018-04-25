@@ -1,0 +1,8 @@
+Treœæ zadania 1:
+Napisaæ w dowolnym (nowo¿ytnym) jêzyku programowania aplikacjê do kodowania pliku do kodu Base64.
+Cele aplikacji:
+* powinna pozwoliæ na wczytanie dowolnego pliku .txt, .bmp i .zip i zapisanie jego kodu Base64 (jako string) w pliku wynikowym, np. obraz.bmp -> obraz.b64
+* nie powinna ograniczaæ rozmiaru pliku wejœciowego
+* ca³a logika Base64 powinna zostaæ napisana samodzielnie (zakaz korzystania z gotowych bibliotek)
+* powinna obs³ugiwaæ padding, je¿eli d³ugoœæ ostatniego kawa³ka informacji wejœciowej nie da siê podzieliæ równo na 3 bajty
+Aplikacja mo¿e byæ okienkowa lub konsolowa. W przypadku wykorzystania bardzo egzotycznych jêzyków programowania, nale¿y wczeœniej wyt³umaczyæ powód takiego wyboru. Przed prezentacj¹ swojej aplikacji warto sprawdziæ, czy otrzymany rezultat jest identyczny z rezultatem uzyskanym na tym samym pliku przez inne sprawdzone narzêdzia. Sprawdzenie poprawnoœci aplikacji zostanie sprawdzone na 3 plikach wybranych przez prowadz¹cego zajêcia.

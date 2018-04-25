@@ -1,0 +1,2 @@
+- Compile with gcc on Linux.
+- One argument: input filename.
